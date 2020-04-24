@@ -1,4 +1,4 @@
-import https from 'https'
+import http2 from 'http2'
 import fs from 'fs'
 import path from 'path'
 import { promisify } from 'util'
@@ -13,7 +13,7 @@ const readFile = promisify(fs.readFile)
     cert: await readFile(path.resolve(__dirname, '../certs/cert.pem'))
   }
 
-  https
+  http2
     .createServer(options, app)
-    .listen(3000, (_) => console.log('Server open on port 3000'))
+    .listen(3000, () => console.log('Server open on port 3000'))
 })()
