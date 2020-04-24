@@ -10,6 +10,7 @@ Thumbs.db
 
 archive
 certs
+coverage
 dist
 node_modules
 pocs
