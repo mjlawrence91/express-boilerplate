@@ -7,7 +7,8 @@
     "start": "node index.js",
     "test": "jest",
     "watch:test": "jest --watchAll",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "ci:test": "jest --ci --runInBand --reporters=default --reporters=jest-junit"
   },
   "repository": {
     "type": "git",
