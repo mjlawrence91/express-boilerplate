@@ -12,8 +12,6 @@ describe('Base Express app', () => {
   it('uses HTTP/2', async () => {
     const res = await supertest(app).get('/debug')
 
-    // console.log(Object.keys(res))
-
     expect(res.status).toBe(200)
     expect(res.text).toEqual('Hello World')
   })
