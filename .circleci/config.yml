@@ -28,12 +28,12 @@ jobs:
             JEST_JUNIT_OUTPUT_DIR: "reports/junit/test-results.xml"
 
       - run:
-          name: coverage
+          name: Run Coverage
           command: npm run coverage
 
       - store_artifacts: # special step to save test results as as artifact
           # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-          path: reports/junit/test-results.xml
+          path: reports/junit/test-results
           prefix: tests
       - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: coverage
