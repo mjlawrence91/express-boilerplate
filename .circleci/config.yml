@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  test:
+  run-test-and-coverage:
     working_directory: ~/express-boilerplate
     docker:
       - image: circleci/node:lts
@@ -45,6 +45,6 @@ jobs:
           name: Check coverage
           command: npm run ci:check-coverage
 workflows:
-  test:
+  run-test-and-coverage:
     jobs:
-      - test
+      - run-test-and-coverage
